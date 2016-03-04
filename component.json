@@ -1,0 +1,6 @@
+{
+    "repos":"http://github.com/huya-fed/simpleMessenger",
+    "version": "0.0.1",
+    "name": "simpleMessenger",
+    "main": "simpleMessenger.js"
+}
