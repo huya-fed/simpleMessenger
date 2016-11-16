@@ -59,6 +59,27 @@
             }
 
             events[code].add(callback)
+        },
+        off: function (name, callback) {
+            var l = arguments.length 
+
+            if (l === 0) {
+                for (var p in events) {
+                    if ( events.hasOwnProperty(p) ) {
+                        events[p].empty()
+                    }
+                }
+            } else {
+                var callbacks = events[name]
+
+                if (callbacks) {
+                    if (l === 1) {
+                        callbacks.empty()
+                    } else {
+                        callbacks.remove(callback)
+                    }
+                }
+            }
         }
     }
 }));
